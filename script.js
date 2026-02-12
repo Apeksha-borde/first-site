@@ -278,14 +278,56 @@
 // }
 
 
-let marks=[87,78,98,67,56,95,45];
+// let marks=[87,78,98,67,56,95,45];
 
-let sum=0;
+// let sum=0;
 
-for (let val of marks){
-    sum+=val;
+// for (let val of marks){
+//     sum+=val;
+// }
+// // console.log(sum);
+// function addToCart(product) {
+//     alert(product + " added to cart!");
+// }
+
+// function submitForm(event) {
+//     event.preventDefault();
+//     alert("Message sent successfully!");
+// }
+
+// function scrollToProducts() {
+//     document.getElementById("products").scrollIntoView();
+// }
+
+// function toggleMenu() {
+//     let nav = document.getElementById("navLinks");
+//     if (nav.style.display === "flex") {
+//         nav.style.display = "none";
+//     } else {
+//         nav.style.display = "flex";
+//     }
+// }
+
+function scrollToProducts(){
+document.getElementById("products").scrollIntoView({behavior:"smooth"});
 }
-console.log(sum);
+
+function toggleMode(){
+document.body.classList.toggle("dark");
+}
+
+
+window.addEventListener("scroll",()=>{
+let reveals=document.querySelectorAll(".reveal");
+reveals.forEach(el=>{
+let windowHeight=window.innerHeight;
+let elementTop=el.getBoundingClientRect().top;
+if(elementTop<windowHeight-100){
+el.classList.add("active");
+}
+});
+});
+
 
 
 

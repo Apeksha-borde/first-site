@@ -1,44 +1,63 @@
-<!-- <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <h1>
-
-  </h1>
-   <script src="script.js"></script>
-</body>
-</html> -->
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>My First Site</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lumora Skincare</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+<div class="particles"></div>
+
+<header>
+    <h2 class="logo">LUMORA</h2>
     <nav>
-        <h2>My portfolio</h2>
-        <ul>
-            <li>about</li>
-            <li>About</li>
-            <li>print</li>
-        </ul>
+        <a href="#home">Home</a>
+        <a href="#products">Products</a>
+        <a href="#about">About</a>
+        <button onclick="toggleMode()" class="mode-btn">🌙</button>
     </nav>
+</header>
 
-    <section class="hero">
-        <h1>Welcome to My First Website</h1>
-        <p>I am learning HTML and CSS.</p>
-        <button>Explore</button>
-    </section>
+<section class="hero" id="home">
+    <h1>Glow Beyond Beauty</h1>
+    <p>Luxury skincare crafted from nature & science</p>
+    <button onclick="scrollToProducts()">Explore</button>
+</section>
 
+<section class="products" id="products">
+    <h2>Featured Collection</h2>
+    <div class="cards">
+        <div class="card reveal">
+            <h3>Radiance Serum</h3>
+            <p>Vitamin C + Hyaluronic Acid</p>
+            <span>$29</span>
+        </div>
+        <div class="card reveal">
+            <h3>Hydra Cream</h3>
+            <p>Deep moisture therapy</p>
+            <span>$24</span>
+        </div>
+        <div class="card reveal">
+            <h3>SPF Shield</h3>
+            <p>SPF 50 UV Protection</p>
+            <span>$19</span>
+        </div>
+    </div>
+</section>
+
+<section class="about" id="about">
+    <h2>Our Philosophy</h2>
+    <p>Clean ingredients. Sustainable packaging. Real results.</p>
+</section>
+
+<footer>
+    © 2026 Lumora Skincare
+</footer>
+
+<script src="script.js"></script>
 </body>
 </html>
+
+

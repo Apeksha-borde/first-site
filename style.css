@@ -1,49 +1,119 @@
 *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family: 'Segoe UI', sans-serif;
 }
 
 body{
-    font-family: Arial, sans-serif;
+background: linear-gradient(135deg,#fbc2eb,#a6c1ee);
+color:#fff;
+overflow-x:hidden;
+transition:0.4s;
 }
 
-nav{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 50px;
-    background-color: black;
-    color: white;
+header{
+display:flex;
+justify-content:space-between;
+padding:20px 60px;
+position:fixed;
+width:100%;
+z-index:100;
 }
 
-nav ul{
-    display: flex;
-    list-style: none;
-    gap: 40px;
+nav a{
+margin:0 15px;
+text-decoration:none;
+color:white;
+}
+
+.mode-btn{
+background:transparent;
+border:none;
+color:white;
+cursor:pointer;
+font-size:18px;
 }
 
 .hero{
-    height: 90vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-    background: linear-gradient(to right, #667eea, #764ba2);
-    color: white;
+height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
 }
 
-button{
-    padding: 10px 20px;
-    border: none;
-    background-color: white;
-    color: black;
-    cursor: pointer;
-    border-radius: 5px;
+.hero h1{
+font-size:50px;
+margin-bottom:20px;
 }
 
-button:hover{
-    background-color: black;
-    color: white;
+.hero button{
+padding:12px 30px;
+border:none;
+background:white;
+color:#333;
+border-radius:30px;
+cursor:pointer;
+transition:0.3s;
+}
+
+.hero button:hover{
+transform:scale(1.1);
+}
+
+.products{
+padding:100px 40px;
+text-align:center;
+}
+
+.cards{
+display:flex;
+justify-content:center;
+gap:30px;
+flex-wrap:wrap;
+margin-top:40px;
+}
+
+.card{
+width:250px;
+padding:30px;
+backdrop-filter: blur(10px);
+background: rgba(255,255,255,0.2);
+border-radius:20px;
+transition:0.4s;
+opacity:0;
+transform:translateY(40px);
+}
+
+.card:hover{
+transform:scale(1.1);
+}
+
+.card span{
+display:block;
+margin-top:15px;
+font-weight:bold;
+}
+
+.about{
+padding:100px 40px;
+text-align:center;
+}
+
+footer{
+text-align:center;
+padding:20px;
+}
+
+
+.reveal.active{
+opacity:1;
+transform:translateY(0);
+}
+
+
+.dark{
+background: linear-gradient(135deg,#141e30,#243b55);
 }
