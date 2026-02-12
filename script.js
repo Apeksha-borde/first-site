@@ -240,7 +240,7 @@
 
 // let i=100;
 
-// for (i=0;i<=100;i=i+2){
+// for (i=0;i<=100;i=i+2){   
 //     console.log(i);
 // }
 
@@ -263,16 +263,29 @@
 // console.log("congratulation you enter a right number");
 
 
+// let marks=[98,56,90,87,67,59,82,95]
+
+// for (let i=0;i<marks.length;i++){
+//     console.log(i); 
+// }
 
 
 
+// let cities=["mumbai","pune","nashik","delhi","bandra","hydrabad","banglor"]
+
+// for (let city of cities){
+//     console.log(city);
+// }
 
 
+let marks=[87,78,98,67,56,95,45];
 
+let sum=0;
 
-
-
-
+for (let val of marks){
+    sum+=val;
+}
+console.log(sum);
 
 
 
