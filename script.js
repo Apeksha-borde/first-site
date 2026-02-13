@@ -308,25 +308,29 @@
 //     }
 // }
 
-function scrollToProducts(){
-document.getElementById("products").scrollIntoView({behavior:"smooth"});
-}
+// function scrollToProducts(){
+// document.getElementById("products").scrollIntoView({behavior:"smooth"});
+// }
 
-function toggleMode(){
-document.body.classList.toggle("dark");
-}
+// function toggleMode(){
+// document.body.classList.toggle("dark");
+// }
 
 
-window.addEventListener("scroll",()=>{
-let reveals=document.querySelectorAll(".reveal");
-reveals.forEach(el=>{
-let windowHeight=window.innerHeight;
-let elementTop=el.getBoundingClientRect().top;
-if(elementTop<windowHeight-100){
-el.classList.add("active");
-}
-});
-});
+// window.addEventListener("scroll",()=>{
+// let reveals=document.querySelectorAll(".reveal");
+// reveals.forEach(el=>{
+// let windowHeight=window.innerHeight;
+// let elementTop=el.getBoundingClientRect().top;
+// if(elementTop<windowHeight-100){
+// el.classList.add("active");
+// }
+// });
+// });
+
+
+
+
 
 
 
