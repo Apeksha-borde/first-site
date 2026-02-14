@@ -327,9 +327,162 @@
 // }
 // });
 // });
+                                                                                                
+function scrollToProducts(){
+    document.getElementById("products").scrollIntoView({
+        behavior: "smooth"
+    });
+}
 
+function addToCart(product){
+    alert(product + " added to cart!");
+}
+ // ===============================
+// PRODUCT DATA
+// ===============================
 
+const products = [
+    {
+        id: 1,
+        name: "Vitamin C Serum",
+        price: 499,
+        category: "serum",
+        image: "https://images.unsplash.com/photo-1600180758895-6b94519a8ba5"
+    },
+    {
+        id: 2,
+        name: "Niacinamide Serum",
+        price: 599,
+        category: "serum",
+        image: "https://images.unsplash.com/photo-1611080626919-7cf5a9e9b6c2"
+    },
+    {
+        id: 3,
+        name: "Sunscreen SPF 50",
+        price: 399,
+        category: "sunscreen",
+        image: "https://images.unsplash.com/photo-1580870069867-74c57ee1bb07"
+    }
+];
 
+// ===============================
+// CART SYSTEM
+// ===============================
+
+let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+function saveCart() {
+    localStorage.setItem("cart", JSON.stringify(cart));
+    updateCartCount();
+}
+
+function addToCart(id) {
+    const product = products.find(p => p.id === id);
+    cart.push(product);
+    saveCart();
+    showToast(product.name + " added to cart");
+}
+
+function removeFromCart(index) {
+    cart.splice(index, 1);
+    saveCart();
+    renderCart();
+}
+
+function updateCartCount() {
+    const cartCount = document.getElementById("cart-count");
+    if (cartCount) {
+        cartCount.textContent = cart.length;
+    }
+}
+
+// ===============================
+// RENDER PRODUCTS
+// ===============================
+
+function renderProducts(filter = "all") {
+    const container = document.querySelector(".product-container");
+    container.innerHTML = "";
+
+    const filteredProducts = filter === "all"
+        ? products
+        : products.filter(p => p.category === filter);
+
+    filteredProducts.forEach(product => {
+        container.innerHTML += `
+            <div class="product">
+                <img src="${product.image}">
+                <h3>${product.name}</h3>
+                <p>₹${product.price}</p>
+                <button onclick="addToCart(${product.id})">Add to Cart</button>
+            </div>
+        `;
+    });
+}
+
+// ===============================
+// RENDER CART
+// ===============================
+
+function renderCart() {
+    const cartContainer = document.getElementById("cart-items");
+    if (!cartContainer) return;
+
+    cartContainer.innerHTML = "";
+
+    cart.forEach((item, index) => {
+        cartContainer.innerHTML += `
+            <div class="cart-item">
+                <p>${item.name} - ₹${item.price}</p>
+                <button onclick="removeFromCart(${index})">Remove</button>
+            </div>
+        `;
+    });
+}
+
+// ===============================
+// TOAST NOTIFICATION
+// ===============================
+
+function showToast(message) {
+    const toast = document.createElement("div");
+    toast.className = "toast";
+    toast.innerText = message;
+    document.body.appendChild(toast);
+
+    setTimeout(() => {
+        toast.remove();
+    }, 2000);
+}
+
+// ===============================
+// MOBILE MENU
+// ===============================
+
+function toggleMenu() {
+    const menu = document.querySelector("nav ul");
+    menu.classList.toggle("active");
+}
+
+// ===============================
+// SMOOTH SCROLL
+// ===============================
+
+function scrollToProducts() {
+    document.getElementById("products").scrollIntoView({
+        behavior: "smooth"
+    });
+}
+
+// ===============================
+// INITIAL LOAD
+// ===============================
+
+document.addEventListener("DOMContentLoaded", () => {
+    renderProducts();
+    updateCartCount();
+    renderCart();
+});
 
 
 

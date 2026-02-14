@@ -1,98 +1,136 @@
-# 🌸 Lumora Skincare Website
+🌿 The Derma Co – Skincare Website
 
-A modern and creative skincare brand website built using **HTML, CSS, and JavaScript**.
+A modern, responsive skincare website inspired by dermatologist-recommended skincare brands.
+This project showcases a clean UI, product display section, testimonials, and interactive JavaScript functionality.
 
-This project features a luxury glassmorphism design, smooth animations, dark mode toggle, and responsive layout.
+📌 Project Overview
 
----
+This website is designed to represent a professional skincare brand with:
 
-## ✨ Features
+Clean and minimal design
 
-- 💎 Modern Gradient UI
-- 🧊 Glassmorphism Product Cards
-- 🌙 Dark / Light Mode Toggle
-- 🎯 Smooth Scroll Navigation
-- 🎬 Scroll Reveal Animations
-- 📱 Fully Responsive Design
-- 🚀 Lightweight & Fast
+Science-backed branding style
 
----
+Responsive layout for all devices
 
-## 📂 Project Structure
+Interactive product section
+
+Smooth scrolling navigation
+
+It is built using HTML, CSS, and JavaScript in a single-page format.
+
+🚀 Features
+
+✅ Responsive Navigation Bar
+
+✅ Hero Section with Call-To-Action
+
+✅ Product Cards (Best Sellers)
+
+✅ Add to Cart Alert Functionality
+
+✅ About Section
+
+✅ Customer Testimonial Section
+
+✅ Smooth Scroll Behavior
+
+✅ Mobile Responsive Design
+
+🛠️ Tech Stack
+Technology	Purpose
+HTML5	Structure of the website
+CSS3	Styling and layout
+JavaScript (Vanilla JS)	Interactivity
+Unsplash Images	Demo product images
+📂 Project Structure
+project-folder/
+│
+├── index.html
+└── README.md
 
 
----
+This project currently uses a single HTML file containing:
 
-## 🛠️ Technologies Used
+Internal CSS
 
-- HTML5
-- CSS3 (Flexbox, Animations, Glass Effect)
-- JavaScript (DOM Manipulation, Scroll Events)
+Internal JavaScript
 
----
+💻 Installation & Usage
 
-## 🚀 How to Run the Project
+Download or clone the repository.
 
-1. Download or clone this repository
-2. Open the project folder
-3. Open `index.html` in your browser
+Open the project folder.
 
-No installation or dependencies required.
+Double-click index.html
+OR
+Right-click → Open with browser.
 
----
+No additional setup or dependencies required.
 
-## 🎨 Design Concept
+📱 Responsive Design
 
-**Brand Name:** Lumora  
-**Theme:** Luxury Natural Skincare  
-**Style:** Glassmorphism + Soft Gradient  
-**User Experience Focus:** Clean, modern, premium look
+The website is fully responsive and adapts to:
 
----
+Desktop Screens
 
-## 📸 Sections Included
+Tablets
 
-- Hero Section
-- Featured Products
-- About Section
-- Responsive Navigation
-- Footer
+Mobile Devices
 
----
+Media queries are used to ensure proper layout on smaller screens.
 
-## 🌙 Dark Mode
+🛒 JavaScript Functionality
 
-Click the moon icon in the navigation bar to toggle between Light and Dark mode.
+The project includes basic JavaScript functions:
 
----
+scrollToProducts() → Smooth scroll to product section
 
-## 📱 Responsive Design
+addToCart(productName) → Displays alert when product is added
 
-The website adapts to:
-- Desktop
-- Tablet
-- Mobile Devices
+This can be upgraded to a full shopping cart system.
 
----
+🎨 Customization
 
-## 🔮 Future Improvements (Optional Ideas)
+You can customize:
 
-- 🛒 Shopping Cart System
-- 💳 Checkout Page
-- 🧴 Product Detail Pages
-- 🌐 Backend Integration
-- 📦 Add to Cart Counter
-- 🎥 Background Video Hero Section
+Brand colors in CSS
 
----
+Product images
 
-## 👩‍💻 Author
+Product descriptions
 
-Developed by **Apeksha Borde**
+Hero section text
 
----
+Add more product cards
 
-## 📄 License
+Connect to backend or payment gateway
 
-This project is open-source and free to use for learning purposes.
+🔮 Future Improvements
 
+Real Cart System with Local Storage
+
+Product Filtering
+
+Dark Mode Toggle
+
+Backend Integration
+
+Payment Gateway Integration
+
+Login / Signup System
+
+Animation Enhancements
+
+📸 Preview
+
+Open index.html in your browser to see the live preview.
+
+📄 License
+
+This project is for educational and portfolio purposes.
+
+👩‍💻 Author
+
+Developed by Apeksha Borde
+Front-End Web Developer
