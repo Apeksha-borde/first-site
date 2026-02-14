@@ -1,367 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>The Derma Co - Skincare</title>
-
-<style>
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family: 'Segoe UI', sans-serif;
-}
-
-body{
-    background:#6baccc;
-    color:#180a0a;
-    scroll-behavior:smooth;
-}
-
-a{
-    text-decoration:none;
-    color:inherit;
-}
-
-nav{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:20px 8%;
-    background:white;
-    box-shadow:0 2px 10px rgba(0,0,0,0.05);
-    position:sticky;
-    top:0;
-    z-index:1000;
-}
-
-nav h2{
-    color:#0bb3c4;
-}
-
-nav ul{
-    list-style:none;
-    display:flex;
-    gap:30px;
-}
-
-nav ul li{
-    cursor:pointer;
-    transition:0.3s;
-}
-
-nav ul li:hover{
-    color:#0bb3c4;
-}
-
-
-.hero{
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    padding:60px 8%;
-    background:linear-gradient(to right,#e8f9fc,#ffffff);
-}
-
-.hero-text{
-    max-width:500px;
-}
-
-.hero h1{
-    font-size:40px;
-    color:#0bb3c4;
-    margin-bottom:20px;
-}
-
-.hero p{
-    margin-bottom:20px;
-    font-size:18px;
-}
-
-.hero button{
-    padding:12px 25px;
-    border:none;
-    background:#0bb3c4;
-    color:white;
-    border-radius:25px;
-    cursor:pointer;
-    transition:0.3s;
-}
-
-.hero button:hover{
-    background:#0894a1;
-}
-
-.hero img{
-    width:400px;
-}
-
-
-.products{
-    padding:80px 8%;
-    text-align:center;
-}
-
-.products h2{
-    font-size:32px;
-    margin-bottom:40px;
-}
-
-.product-container{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:30px;
-}
-
-.product{
-    background:white;
-    padding:20px;
-    border-radius:15px;
-    box-shadow:0 5px 20px rgba(0,0,0,0.05);
-    transition:0.3s;
-}
-
-.product:hover{
-    transform:translateY(-5px);
-}
-
-.product img{
-    width:100%;
-    height:200px;
-    object-fit:cover;
-    border-radius:10px;
-}
-
-.product h3{
-    margin:15px 0 10px;
-}
-
-.product p{
-    font-size:14px;
-    margin-bottom:10px;
-}
-
-.product button{
-    padding:8px 20px;
-    border:none;
-    background:#0bb3c4;
-    color:white;
-    border-radius:20px;
-    cursor:pointer;
-}
-
-
-.about{
-    padding:80px 8%;
-    background:#e8f9fc;
-    text-align:center;
-}
-
-.about h2{
-    margin-bottom:20px;
-}
-
-
-.testimonial{
-    padding:80px 8%;
-    text-align:center;
-}
-
-.testimonial-card{
-    background:white;
-    padding:30px;
-    max-width:600px;
-    margin:auto;
-    border-radius:15px;
-    box-shadow:0 5px 20px rgba(0,0,0,0.05);
-}
-
-
-footer{
-    padding:20px;
-    text-align:center;
-    background:#0bb3c4;
-    color:white;
-}
-
-
-@media(max-width:768px){
-    .hero{
-        flex-direction:column;
-        text-align:center;
-    }
-    .hero img{
-        width:300px;
-        margin-top:30px;
-    }
-}
-</style>
+    <meta charset="UTF-8">
+    <title>Creative Developer Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+<div class="cursor"></div>
+<div class="preloader">
+    <div class="loader"></div>
+</div>
 
-<nav>
-    <h2>The Derma Co.</h2>
-    <ul>
-        <li><a href="#products">Products</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#contact">Contact</a></li>
-    </ul>
-</nav>
+<canvas id="particles"></canvas>
 
 
-<section class="hero">
-    <div class="hero-text">
-        <h1>Dermatologist Recommended Skincare</h1>
-        <p>Science-backed formulas for healthy, glowing skin.</p>
-        <button onclick="scrollToProducts()">Shop Now</button>
-    </div>
-    <!-- <img src="https://images.unsplash.com/photo-1596462502278-27bfdc403348" alt="Skincare"> -->
-</section>
+<header id="navbar">
+    <h1 class="logo">Apeksha.borde</h1>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+        <button id="themeToggle">🌙</button>
+    </nav>
+</header>
 
 
-<section class="products" id="products">
-    <h2>Our Best Sellers</h2>
-    <div class="product-container">
-        
-        <div class="product">
-            <!-- <img src="https://images.unsplash.com/photo-1600180758895-6b94519a8ba5" alt=""> -->
-            <h3>Vitamin C Serum</h3>
-            <p>Brightens skin & reduces pigmentation.</p>
-            <button onclick="addToCart('Vitamin C Serum')">Add to Cart</button>
+<section id="home" class="section hero">
+    <div class="hero-content">
+        <div class="hero-text">
+            <h2>Hello, I'm <span class="highlight">Apeksha</span></h2>
+            <h3 class="typing"></h3>
+            <button onclick="scrollToSection('projects')">View My Work</button>
         </div>
 
-        <div class="product">
-            <img src="https://images.unsplash.com/photo-1611080626919-7cf5a9e9b6c2" alt="">
-            <h3>Niacinamide Serum</h3>
-            <p>Controls oil & minimizes pores.</p>
-            <button onclick="addToCart('Niacinamide Serum')">Add to Cart</button>
+        <div class="hero-image">
+            <div class="image-wrapper">
+                <img src="IMG_20250704_215626_878.webp" alt="Apeksha">
+            </div>
         </div>
-
-        <div class="product">
-            <!-- <img src="https://images.unsplash.com/photo-1580870069867-74c57ee1bb07" alt=""> -->
-            <h3>Sunscreen SPF 50</h3>
-            <p>Protects from harmful UV rays.</p>
-            <button onclick="addToCart('Sunscreen SPF 50')">Add to Cart</button>
-        </div>
-
     </div>
 </section>
 
 
-<section class="about" id="about">
-    <h2>About The Derma Co.</h2>
-    <p>We create science-backed skincare products developed with dermatologists to solve real skin concerns.</p>
+<section id="about" class="section glass">
+    <h2>About Me</h2>
+    <p>
+        I craft modern, interactive, and performance-focused web experiences.
+        Passionate about building creative UI with clean architecture.
+    </p>
 </section>
-
-
-<section class="testimonial">
-    <h2>What Our Customers Say</h2>
-    <div class="testimonial-card">
-        <p>"The Vitamin C Serum completely transformed my skin! Highly recommended."</p>
-        <h4>- Happy Customer</h4>
+<section class="section glass">
+    <h2>Skills</h2>
+    <div class="skills">
+        <div class="skill">
+            <span>HTML</span>
+            <div class="progress"><div data-width="95%"></div></div>
+        </div>
+        <div class="skill">
+            <span>CSS</span>
+            <div class="progress"><div data-width="90%"></div></div>
+        </div>
+        <div class="skill">
+            <span>JavaScript</span>
+            <div class="progress"><div data-width="85%"></div></div>
+        </div>
     </div>
 </section>
 
 
-<footer id="contact">
-    <p>© 2026 The Derma Co. All Rights Reserved.</p>
+
+<section id="projects" class="section">
+    <h2>Projects</h2>
+    <div class="project-container">
+        <div class="project-card">
+            <h3>AI Web App</h3>
+            <p>Modern AI-based web platform with animations and smooth UX.</p>
+        </div>
+        <div class="project-card">
+            <h3>Skincare Brand UI</h3>
+            <p>Luxury UI design with clean and minimal aesthetic.</p>
+        </div>
+        <div class="project-card">
+            <h3>Developer Tools</h3>
+            <p>Custom productivity tools and browser extensions.</p>
+        </div>
+    </div>
+</section>
+
+<section id="contact" class="section glass">
+    <h2>Contact Me</h2>
+    <p>Let's build something extraordinary.</p>
+    <button onclick="showMessage()">Say Hello</button>
+</section>
+
+<footer>
+    <p>© 2026 Apeksha | Designed with Creativity</p>
 </footer>
 
-<script>
-function scrollToProducts(){
-    document.getElementById("products").scrollIntoView({behavior:"smooth"});
-}
-
-function addToCart(product){
-    alert(product + " added to cart!");
-}
-</script>
-
-</body>
-</html>
-
-
-
-
-
-
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>The Derma Co - Skincare</title>
-
-<!-- External CSS -->
-<link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-
-<!-- NAVBAR -->
-<nav>
-    <h2>The Derma Co.</h2>
-    <ul>
-        <li><a href="#products">Products</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#contact">Contact</a></li>
-    </ul>
-</nav>
-
-<!-- HERO -->
-<section class="hero">
-    <div class="hero-text">
-        <h1>Dermatologist Recommended Skincare</h1>
-        <p>Science-backed formulas for healthy, glowing skin.</p>
-        <button onclick="scrollToProducts()">Shop Now</button>
-    </div>
-    <img src="https://images.unsplash.com/photo-1596462502278-27bfdc403348" alt="Skincare">
-</section>
-
-<!-- PRODUCTS -->
-<section class="products" id="products">
-    <h2>Our Best Sellers</h2>
-    <div class="product-container">
-        
-        <div class="product">
-            <img src="https://images.unsplash.com/photo-1600180758895-6b94519a8ba5" alt="">
-            <h3>Vitamin C Serum</h3>
-            <p>Brightens skin & reduces pigmentation.</p>
-            <button onclick="addToCart('Vitamin C Serum')">Add to Cart</button>
-        </div>
-
-        <div class="product">
-            <img src="https://images.unsplash.com/photo-1611080626919-7cf5a9e9b6c2" alt="">
-            <h3>Niacinamide Serum</h3>
-            <p>Controls oil & minimizes pores.</p>
-            <button onclick="addToCart('Niacinamide Serum')">Add to Cart</button>
-        </div>
-
-        <div class="product">
-            <img src="https://images.unsplash.com/photo-1580870069867-74c57ee1bb07" alt="">
-            <h3>Sunscreen SPF 50</h3>
-            <p>Protects from harmful UV rays.</p>
-            <button onclick="addToCart('Sunscreen SPF 50')">Add to Cart</button>
-        </div>
-
-    </div>
-</section>
-
-<!-- ABOUT -->
-<section class="about" id="about">
-    <h2>About The Derma Co.</h2>
-    <p>We create science-backed skincare products developed with dermatologists to solve real skin concerns.</p>
-</section>
-
-<!-- FOOTER -->
-<footer id="contact">
-    <p>© 2026 The Derma Co. All Rights Reserved.</p>
-</footer>
-
-<!-- External JS -->
-<script src="js/script.js"></script>
-
+<script src="script.js"></script>
 </body>
 </html>
