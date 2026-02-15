@@ -223,7 +223,7 @@ button {
     height: 100%;
     /* object-fit: cover; */
     border-radius: 50%;
-    border: 5px solid #00f2ff;
+    border: 5px solid #345a5c;
 }
 
 @keyframes rotateBorder {
