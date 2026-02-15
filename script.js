@@ -5,7 +5,6 @@ document.addEventListener('mousemove', (e) => {
     cursor.style.left = e.clientX + "px";
 });
 
-// Typing Effect
 const textArray = ["Creative Developer", "UI Designer", "JavaScript Enthusiast"];
 let typingElement = document.querySelector(".typing");
 let textIndex = 0;
@@ -34,19 +33,19 @@ function eraseEffect() {
 
 typeEffect();
 
-// Scroll Button
+
 function scrollToSection(id) {
     document.getElementById(id).scrollIntoView({
         behavior: "smooth"
     });
 }
 
-// Contact Button
+
 function showMessage() {
     alert("Thank you for reaching out! 🚀");
 }
 
-// Scroll Reveal
+
 const sections = document.querySelectorAll(".section");
 
 window.addEventListener("scroll", () => {
