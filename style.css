@@ -44,7 +44,7 @@ nav a::after {
     position: absolute;
     width: 0%;
     height: 2px;
-    background: #00f2ff;
+    background: #348488;
     bottom: -5px;
     left: 0;
     transition: 0.3s;
@@ -67,7 +67,7 @@ nav a:hover::after {
 }
 
 .highlight {
-    color: #22959b;
+    color: #68f0e4;
 }
 
 button {
@@ -188,7 +188,7 @@ button {
 .progress div {
     height: 100%;
     width: 0;
-    background: #00f2ff;
+    background: #00ccff;
     transition: 2s ease;
 }
 #particles {
@@ -214,8 +214,8 @@ button {
     height: 300px;
     border-radius: 30%;
     padding: 10px;
-    background: linear-gradient(45deg, #00f2ff, #ff00c8); 
-    animation: rotateBorder 6s linear infinite;
+    /* background: linear-gradient(45deg, #00f2ff, #ff00c8);  */
+    /* animation: rotateBorder 6s linear infinite; */
  }
 
 .image-wrapper img {
