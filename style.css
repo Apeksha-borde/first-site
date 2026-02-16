@@ -28,7 +28,7 @@ header {
     justify-content: space-between;
     padding: 20px 50px;
     backdrop-filter: blur(10px);
-    background: rgba(255,255,255,0.05);
+    /* background: rgba(201, 31, 31, 0.05); */
     z-index: 1000;
 }
 
@@ -74,8 +74,8 @@ button {
     margin-top: 20px;
     padding: 12px 25px;
     border: none;
-    background: #00f2ff;
-    color: black;
+    background: #0F172A;
+    color: rgb(231, 220, 220);
     font-weight: bold;
     cursor: pointer;
     border-radius: 30px;
