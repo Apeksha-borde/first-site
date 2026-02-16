@@ -214,8 +214,8 @@ button {
     height: 300px;
     border-radius: 30%;
     padding: 10px;
-    /* background: linear-gradient(45deg, #00f2ff, #ff00c8); */
-    /* animation: rotateBorder 6s linear infinite; */
+    background: linear-gradient(45deg, #00f2ff, #ff00c8); 
+    animation: rotateBorder 6s linear infinite;
  }
 
 .image-wrapper img {
