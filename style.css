@@ -14,11 +14,6 @@ body {
     overflow-x: hidden;
 }
 
-@keyframes gradientMove {
-    0% { background-position: 0% 50%;}
-    50% { background-position: 100% 50%;}
-    100% { background-position: 0% 50%;}
-}
 
 header {
     position: fixed;
@@ -138,9 +133,7 @@ footer {
     animation: spin 1s linear infinite;
 }
 
-@keyframes spin {
-    100% { transform: rotate(360deg); }
-}
+
 body.light {
     background: #f4f4f4;
     color: black;
@@ -215,10 +208,6 @@ button {
     border: 5px solid #345a5c;
 }
 
-@keyframes rotateBorder {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
-}
 
 .section {
     opacity: 0;
@@ -227,4 +216,4 @@ button {
 }
 header {
     transition: all 0.4s ease;
-}   */
+}    */

@@ -153,6 +153,38 @@
 // animateParticles();                                                                                                                      
 
 
+function greet(){
+    console.log("apeksha");
+}
+greet();
+greet();
+greet();
+greet();
+greet();
+greet();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
