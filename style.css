@@ -1,4 +1,4 @@
- /* * {
+ * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -133,7 +133,7 @@ footer {
     animation: spin 1s linear infinite;
 }
 
-
+ 
 body.light {
     background: #f4f4f4;
     color: black;
@@ -216,4 +216,60 @@ button {
 }
 header {
     transition: all 0.4s ease;
-}    */
+}    
+
+
+
+
+
+
+
+
+
+
+ /* * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+html,body {
+    height: 100%;
+    width: 100%;
+}
+#parent{
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+#child{
+    height: 100px;
+    width: 100px;
+    background-color: crimson;
+}
+
+#child1{
+    height: 100px;
+    width: 100px;
+    background-color: rgb(223, 167, 178);
+}
+
+#child2{
+    height: 100px;
+    width: 100px;
+    background-color: rgb(167, 105, 117);
+}
+
+#child3{
+    height: 100px;
+    width: 100px;
+    background-color: rgb(73, 7, 20);
+}
+
+ */
+
