@@ -122,8 +122,6 @@ Add blog section
 
 Optimize performance & Lighthouse score
 
-📬 Contact
 
-Designed & Developed by Apeksha Borde
-2026 © All Rights Reserved
+
 
