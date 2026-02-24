@@ -1,226 +1,102 @@
- * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Segoe UI', sans-serif;
-    scroll-behavior: smooth;
-}
-
 body {
-    background: linear-gradient(-45deg, #0f2027, #203a43, #2c5364, #1c1c1c);
-    background-size: 400% 400%;
-    animation: gradientMove 10s ease infinite;
-    color: white;
-    overflow-x: hidden;
+    margin: 0;
+    font-family: Arial;
+    background: #f5f5f5;
 }
 
-
-header {
-    position: fixed;
-    width: 100%;
-    top: 0;
+.navbar {
     display: flex;
     justify-content: space-between;
-    padding: 20px 50px;
-    backdrop-filter: blur(10px);
-    z-index: 1000;
-}
-
-nav a {
-    margin-left: 20px;
-    text-decoration: none;
+    align-items: center;
+    padding: 15px 30px;
+    background: #111;
     color: white;
-    position: relative;
 }
 
-nav a::after {
-    content: '';
-    position: absolute;
-    width: 0%;
-    height: 2px;
-    background: #348488;
-    bottom: -5px;
-    left: 0;
-    transition: 0.3s;
-}
-
-nav a:hover::after {
-    width: 100%;
-}
-
-.section {
-    min-height: 100vh;
-    padding: 120px 10%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+.navbar input {
+    padding: 7px;
+    border-radius: 5px;
+    border: none;
 }
 
 .hero {
     text-align: center;
+    padding: 60px;
+    background: linear-gradient(to right, #667eea, #764ba2);
+    color: white;
 }
 
-.highlight {
-    color: #68f0e4;
-}
-
-button {
-    margin-top: 20px;
-    padding: 12px 25px;
-    border: none;
-    background: #0F172A;
-    color: rgb(231, 220, 220);
-    font-weight: bold;
-    cursor: pointer;
-    border-radius: 30px;
-    transition: 0.3s;
-}
-
-button:hover {
-    transform: scale(1.1);
-}
-
-.project-container {
-    display: flex;
-    gap: 30px;
-    flex-wrap: wrap;
-}
-
-.project-card {
-    flex: 1 1 250px;
-    padding: 30px;
-    border-radius: 20px;
-  
-    background: #2C5364;
-    backdrop-filter: blur(10px);
-    transition: 0.3s;
-}
-
-.project-card:hover {
-    transform: translateY(-15px) scale(1.05);
-    background: #041C32;
-}
-
-.glass {
-    background: rgba(255,255,255,0.05);
-    backdrop-filter: blur(15px);
-    border-radius: 20px;
-}
-
-footer {
+.filters {
     text-align: center;
+    margin: 20px;
+}
+
+.filters button {
+    padding: 8px 15px;
+    margin: 5px;
+    border: none;
+    background: #333;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.products {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
     padding: 20px;
 }
 
-.preloader {
-    position: fixed;
+.product {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    transition: 0.3s;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.product:hover {
+    transform: translateY(-5px);
+}
+
+.product img {
     width: 100%;
-    height: 100%;
-    background: #235b74;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 3000;
+    height: 150px;
+    object-fit: cover;
 }
 
-.loader {
-    width: 50px;
-    height: 50px;
-    border: 5px solid #00f2ff;
-    border-top: 5px solid transparent;
-    border-radius: 50%;
-    animation: spin 1s linear infinite;
-}
-
- 
-body.light {
-    background: #f4f4f4;
-    color: black;
-}
-
-body.light .glass {
-    background: rgba(0,0,0,0.05);
-}
-button {
-    transition: transform 0.2s ease;
-}
-
-#themeToggle {
-    margin-left: 20px;
-    padding: 5px 10px;
+.product button {
+    margin-top: 10px;
+    padding: 7px 12px;
+    border: none;
+    background: #667eea;
+    color: white;
+    border-radius: 5px;
     cursor: pointer;
 }
-.skills {
-    width: 100%;
-    max-width: 600px;
-}
 
-.skill {
-    margin: 20px 0;
-}
-
-.progress {
-    width: 100%;
-    height: 10px;
-    background: rgba(255,255,255,0.1);
-    border-radius: 10px;
-    overflow: hidden;
-}
-
-.progress div {
-    height: 100%;
-    width: 0;
-    background: #00ccff;
-    transition: 2s ease;
-}
-#particles {
+.cart-sidebar {
     position: fixed;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-}
-.hero-content {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 50px;
-    flex-wrap: wrap;
-}
-
-.hero-image {
-    position: relative;
-}
-
-.image-wrapper {
+    right: -350px;
+    top: 0;
     width: 300px;
-    height: 300px;
-    border-radius: 30%;
-    padding: 10px;
-
- }
-
-.image-wrapper img {
-    width: 100%;
     height: 100%;
-    object-fit: cover;
-     border-radius: 50%;
-    border: 5px solid #345a5c;
+    background: white;
+    padding: 20px;
+    box-shadow: -4px 0 10px rgba(0,0,0,0.2);
+    transition: 0.3s;
+    overflow-y: auto;
 }
 
-
-.section {
-    opacity: 0;
-    transform: translateY(80px);
-    transition: all 1s ease;
+.cart-sidebar.active {
+    right: 0;
 }
-header {
-    transition: all 0.4s ease;
-}    
 
-@media (max-height:600px) {
-
-    #navbar{
-        background-color: #1c1c1c;
+@media (max-width: 600px) {
+    .navbar {
+        flex-direction: column;
+        gap: 10px;
     }
-    
 } 

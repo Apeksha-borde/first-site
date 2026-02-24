@@ -1,156 +1,92 @@
-const cursor = document.querySelector('.cursor');
+const products = [
+    {id:1, name:"Laptop", price:50000, category:"electronics", img:"https://via.placeholder.com/200"},
+    {id:2, name:"Headphones", price:2000, category:"electronics", img:"https://via.placeholder.com/200"},
+    {id:3, name:"T-Shirt", price:800, category:"clothes", img:"https://via.placeholder.com/200"},
+    {id:4, name:"Shoes", price:2500, category:"clothes", img:"https://via.placeholder.com/200"}
+];
 
-document.addEventListener('mousemove', (e) => {
-    cursor.style.top = e.clientY + "px";
-    cursor.style.left = e.clientX + "px";
-});
+let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
-const textArray = ["Creative Developer", "UI Designer", "JavaScript Enthusiast"];
-let typingElement = document.querySelector(".typing");
-let textIndex = 0;
-let charIndex = 0;
+function displayProducts(filter="all") {
+    const productList = document.getElementById("product-list");
+    productList.innerHTML = "";
 
-function typeEffect() {
-    if (charIndex < textArray[textIndex].length) {
-        typingElement.textContent += textArray[textIndex].charAt(charIndex);
-        charIndex++;
-        setTimeout(typeEffect, 80);
+    let filtered = products.filter(p => 
+        filter === "all" || p.category === filter
+    );
+
+    const searchValue = document.getElementById("search").value.toLowerCase();
+    filtered = filtered.filter(p => 
+        p.name.toLowerCase().includes(searchValue)
+    );
+
+    filtered.forEach(product => {
+        productList.innerHTML += `
+            <div class="product">
+                <img src="${product.img}">
+                <h3>${product.name}</h3>
+                <p>₹${product.price}</p>
+                <input type="number" min="1" value="1" id="qty-${product.id}">
+                <button onclick="addToCart(${product.id})">Add to Cart</button>
+            </div>
+        `;
+    });
+}
+
+function addToCart(id) {
+    const quantity = parseInt(document.getElementById(`qty-${id}`).value);
+    const product = products.find(p => p.id === id);
+
+    const existing = cart.find(item => item.id === id);
+
+    if(existing){
+        existing.quantity += quantity;
     } else {
-        setTimeout(eraseEffect, 1000);
+        cart.push({...product, quantity});
     }
+
+    updateCart();
 }
 
-function eraseEffect() {
-    if (charIndex > 0) {
-        typingElement.textContent = textArray[textIndex].substring(0, charIndex - 1);
-        charIndex--;
-        setTimeout(eraseEffect, 40);
-    } else {
-        textIndex = (textIndex + 1) % textArray.length;
-        setTimeout(typeEffect, 300);
-    }
-}
+function updateCart() {
+    const cartItems = document.getElementById("cart-items");
+    cartItems.innerHTML = "";
+    let total = 0;
 
-typeEffect();
-
-
-function scrollToSection(id) {
-    document.getElementById(id).scrollIntoView({
-        behavior: "smooth"
-    });
-}
-
-
-function showMessage() {
-    alert("Thank you for reaching out! 🚀");
-}
-
-
-const sections = document.querySelectorAll(".section");
-
-window.addEventListener("scroll", () => {
-    sections.forEach(section => {
-        const top = section.getBoundingClientRect().top;
-        if (top < window.innerHeight - 100) {
-            section.style.opacity = 1;
-            section.style.transform = "translateY(0)";
-        }
-    });
-});
-window.addEventListener("load", () => {
-    document.querySelector(".preloader").style.display = "none";
-});
-const toggle = document.getElementById("themeToggle");
-
-if(localStorage.getItem("theme") === "light"){
-    document.body.classList.add("light");
-}
-
-toggle.addEventListener("click", () => {
-    document.body.classList.toggle("light");
-    if(document.body.classList.contains("light")){
-        localStorage.setItem("theme","light");
-    } else {
-        localStorage.setItem("theme","dark");
-    }
-});
-const progressBars = document.querySelectorAll(".progress div");
-
-window.addEventListener("scroll", () => {
-    progressBars.forEach(bar => {
-        const top = bar.getBoundingClientRect().top;
-        if(top < window.innerHeight - 50){
-            bar.style.width = bar.getAttribute("data-width");
-        }
-    });
-});
-window.addEventListener("scroll", () => {
-    const nav = document.getElementById("navbar");
-    if(window.scrollY > 50){
-        nav.style.background = "rgba(0,0,0,0.6)";
-    } else {
-        nav.style.background = "rgba(255,255,255,0.05)";
-    }
-});
-const buttons = document.querySelectorAll("button");
-
-buttons.forEach(btn => {
-    btn.addEventListener("mousemove", (e) => {
-        const rect = btn.getBoundingClientRect();
-        const x = e.clientX - rect.left - rect.width/2;
-        const y = e.clientY - rect.top - rect.height/2;
-        btn.style.transform = `translate(${x * 0.2}px, ${y * 0.2}px)`;
+    cart.forEach(item => {
+        total += item.price * item.quantity;
+        cartItems.innerHTML += `
+            <p>${item.name} x${item.quantity} - ₹${item.price * item.quantity}</p>
+        `;
     });
 
-    btn.addEventListener("mouseleave", () => {
-        btn.style.transform = "translate(0,0)";
-    });
-});
-const canvas = document.getElementById("particles");
-const ctx = canvas.getContext("2d");
+    document.getElementById("total").innerText = total;
+    document.getElementById("cart-count").innerText = cart.length;
 
-canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
-
-let particlesArray = [];
-
-class Particle {
-    constructor(){
-        this.x = Math.random() * canvas.width;
-        this.y = Math.random() * canvas.height;
-        this.size = Math.random() * 2;
-        this.speedX = Math.random() - 0.5;
-        this.speedY = Math.random() - 0.5;
-    }
-    update(){
-        this.x += this.speedX;
-        this.y += this.speedY;
-    }
-    draw(){
-        ctx.fillStyle = "#00f2ff";
-        ctx.beginPath();
-        ctx.arc(this.x, this.y, this.size, 0, Math.PI*2);
-        ctx.fill();
-    }
+    localStorage.setItem("cart", JSON.stringify(cart));
 }
 
-function initParticles(){
-    for(let i=0;i<100;i++){
-        particlesArray.push(new Particle());
-    }
+function toggleCart(){
+    document.getElementById("cart").classList.toggle("active");
 }
 
-function animateParticles(){
-    ctx.clearRect(0,0,canvas.width,canvas.height);
-    particlesArray.forEach(p=>{
-        p.update();
-        p.draw();
-    });
-    requestAnimationFrame(animateParticles);
+function clearCart(){
+    cart = [];
+    updateCart();
 }
 
-initParticles();
-animateParticles();                                                                                                                      
+function filterProducts(category){
+    displayProducts(category);
+}
+
+document.getElementById("search").addEventListener("input", () => displayProducts());
+
+displayProducts();
+updateCart();
+
+
+
+
 
 
 
