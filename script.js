@@ -81,8 +81,8 @@ function filterProducts(category){
 
 document.getElementById("search").addEventListener("input", () => displayProducts());
 
-displayProducts();
-updateCart();
+// displayProducts();
+// updateCart();
 
 
 
