@@ -8,30 +8,29 @@
 </head>
 <body>
 
-<!-- NAVBAR -->
 <nav class="navbar">
     <h2>ModernShop</h2>
     <input type="text" id="search" placeholder="Search products...">
     <button onclick="toggleCart()">🛒 <span id="cart-count">0</span></button>
 </nav>
 
-<!-- HERO -->
+
 <section class="hero">
     <h1>Big Sale 50% Off</h1>
     <p>Upgrade your style today</p>
 </section>
 
-<!-- FILTER -->
+
 <section class="filters">
     <button onclick="filterProducts('all')">All</button>
     <button onclick="filterProducts('electronics')">Electronics</button>
     <button onclick="filterProducts('clothes')">Clothes</button>
 </section>
 
-<!-- PRODUCTS -->
+
 <section class="products" id="product-list"></section>
 
-<!-- CART SIDEBAR -->
+
 <div class="cart-sidebar" id="cart">
     <h3>Your Cart</h3>
     <div id="cart-items"></div>

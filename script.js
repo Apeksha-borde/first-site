@@ -20,7 +20,7 @@ function displayProducts(filter="all") {
         p.name.toLowerCase().includes(searchValue)
     );
 
-    filtered.forEach(product => {
+    filtered.forEach(product => {   
         productList.innerHTML += `
             <div class="product">
                 <img src="${product.img}">
@@ -81,8 +81,8 @@ function filterProducts(category){
 
 document.getElementById("search").addEventListener("input", () => displayProducts());
 
-// displayProducts();
-// updateCart();
+displayProducts();
+updateCart();
 
 
 
