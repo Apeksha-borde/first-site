@@ -89,22 +89,8 @@ ul{
   border-radius: 3px;
 }
 
-.filter-btn {
-  padding: 8px 18px;
-  border: 1px solid #ccc;
-  background: #f0f0f0;
-  border-radius: 3px;
-  cursor: pointer;
-  font-weight: bold;
-}
 
-.categories {
-  display: flex;
-  gap: 10px;
-  flex-wrap: wrap;
-}
-
-.categories button {
+.all button {
   padding: 6px 14px;
   border-radius: 3px;
   border: 1px solid #ccc;
@@ -139,12 +125,8 @@ ul{
         border: 2px solid blue;
        }
 
+    
         .box3{
-        height: 400px;
-        width: 400px;
-        border: 2px solid blue;
-       }
-        .box4{
         height: 400px;
         width: 400px;
         border: 2px solid blue;
@@ -189,11 +171,6 @@ ul{
         border: 2px solid rgb(137, 58, 137);
        }
 
-        .serum3{
-        height: 400px;
-        width: 400px;
-        border: 2px solid rgb(137, 58, 137);
-       }
         .serum4{
         height: 400px;
         width: 400px;
@@ -215,4 +192,52 @@ ul{
     height: 500px;
     width: 1900px;
     background-color: crimson;
+}
+
+.child1 button{
+    padding: 18px 20px;
+    margin: 0 auto;
+    display: block;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #ffffff;
+    background-color:rgb(254, 138, 22);
+    border-radius: 10px;
+    border-color: white;
+    font-size: 20px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+
+   
+}
+
+#sunscreen{
+       .serum1{
+        height: 400px;
+        width: 400px;
+        border: 2px solid rgb(254, 138, 22)
+        
+       }
+       .serum2{
+        height: 400px;
+        width: 400px;
+        border: 2px solid rgb(254, 138, 22);
+       }
+
+        .serum4{
+        height: 400px;
+        width: 400px;
+        border: 2px solid rgb(254, 138, 22)
+       }
+
+       #sun{
+        display: flex;
+        position: relative;
+        margin-top: 30px;
+        padding: 10px;
+        justify-content: space-evenly;
+        margin-bottom: 50px;
+       }
+
 }
