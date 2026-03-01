@@ -210,3 +210,9 @@ ul{
        }
 
 }
+
+#img{
+    height: 500px;
+    width: 1900px;
+    background-color: crimson;
+}
