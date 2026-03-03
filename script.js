@@ -1,12 +1,12 @@
-const product={
-    title:"ballpen",
-    rating:"4",
-    offer:"5",
-    price:"270",
-};
+const profile={
+     Name:"apeksha",
+     followers:40,
+     following:30,
+     isfollow:true,
 
-console.log(product);
+}
 
+console.log(profile);
 
 
 
