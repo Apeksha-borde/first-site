@@ -1,6 +1,8 @@
 var a=10;
+b=30;
 
-console.log(a);
+console.log(a%b);
+
 
 
 
