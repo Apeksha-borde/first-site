@@ -1,1 +1,7 @@
-console.log("apeksha")
+var a=10;
+
+console.log(a);
+
+
+
+
