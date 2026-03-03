@@ -1,7 +1,11 @@
-var a=10;
-b=30;
+const product={
+    title:"ballpen",
+    rating:"4",
+    offer:"5",
+    price:"270",
+};
 
-console.log(a%b);
+console.log(product);
 
 
 
