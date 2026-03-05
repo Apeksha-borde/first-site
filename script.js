@@ -18,6 +18,27 @@
 // }
 // console.log(sum);
 
-for(i=20;i>=1;i--){
-     console.log(i);
-}
+// let i=1;
+// while(i<=15){
+//     console.log(i)
+//     i++;
+// }
+
+// let j=10;
+// do{
+//     console.log(j,"apeksha") 
+//     j++
+// }while(j<=20)
+
+// let k=0;
+// do{
+//     console.log(k,"sakshi")
+// }while(k<=30);
+
+
+// for(i=1;i<=20;i++){
+//     console.log(i)
+// }
+
+
+

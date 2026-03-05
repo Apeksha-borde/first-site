@@ -3,3 +3,5 @@ Loops:
 Repetation of code 
 
 infinite loop = a loop that never end (we should never do in it program)
+
+while loop = similar as to for loop
