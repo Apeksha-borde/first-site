@@ -41,31 +41,47 @@
 // }
 
 
-let str = "hello world";
+// let str = "hello world";
 
-console.log(str.length);
-
-
-
-let str = "hello";
-let reversed = "";
-
-for (let i = str.length - 1; i >= 0; i--) {
-  reversed += str[i];
-}
-
-console.log(reversed);
+// console.log(str.length);
 
 
 
+// let str = "hello";
+// let reversed = "";
 
+// for (let i = str.length - 1; i >= 0; i--) {
+//   reversed += str[i];
+// }
 
-let str = "javascript";
-
-let result = str[0].toUpperCase() + str.slice(1);
-
-console.log(result);
+// console.log(reversed);
 
 
 
 
+
+// let str = "javascript";
+
+// let result = str[0].toUpperCase() + str.slice(1);
+
+// console.log(result);
+
+
+
+
+// let str = "JavaScript is a powerful language";
+
+// let words = str.split(" ");
+
+// console.log(words);
+
+
+
+
+
+
+let str = "Apeksha is a very smart";
+
+let words = str.split(" ");
+
+console.log(words);
