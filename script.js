@@ -60,11 +60,11 @@
 
 
 
-// let str = "javascript";
+// // let str = "javascript";
 
-// let result = str[0].toUpperCase() + str.slice(1);
+// // let result = str[0].toUpperCase() + str.slice(1);
 
-// console.log(result);
+// // console.log(result);
 
 
 
