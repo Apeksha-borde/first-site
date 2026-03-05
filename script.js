@@ -80,8 +80,21 @@
 
 
 
-let str = "Apeksha is a very smart";
+// let str = "Apeksha is a very smart";
 
-let words = str.split(" ");
+// let words = str.split(" ");
 
-console.log(words);
+// console.log(words);
+
+
+
+
+let str = "madam";
+
+let reversed = str.split("").reverse().join("");
+
+if (str === reversed) {
+  console.log("Palindrome");
+} else {
+  console.log("Not Palindrome");
+}
