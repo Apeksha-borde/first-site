@@ -41,4 +41,31 @@
 // }
 
 
+let str = "hello world";
+
+console.log(str.length);
+
+
+
+let str = "hello";
+let reversed = "";
+
+for (let i = str.length - 1; i >= 0; i--) {
+  reversed += str[i];
+}
+
+console.log(reversed);
+
+
+
+
+
+let str = "javascript";
+
+let result = str[0].toUpperCase() + str.slice(1);
+
+console.log(result);
+
+
+
 
