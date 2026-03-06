@@ -103,3 +103,11 @@
 let fruits = ["Apple", "Banana", "Mango"];
 
 console.log(fruits);
+
+
+
+let fruits = ["Apple", "Banana", "Mango"];
+
+fruits.pop();
+
+console.log(fruits);
