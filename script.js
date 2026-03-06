@@ -100,14 +100,23 @@
 // }
 
 
+// let fruits = ["Apple", "Banana", "Mango"];
+
+// console.log(fruits);
+
+
+
+// let fruits = ["Apple", "Banana", "Mango"];
+
+// fruits.pop();
+
+// console.log(fruits);
+
+
+
+
+
+
 let fruits = ["Apple", "Banana", "Mango"];
 
-console.log(fruits);
-
-
-
-let fruits = ["Apple", "Banana", "Mango"];
-
-fruits.pop();
-
-console.log(fruits);
+console.log(fruits.includes("Banana"));
