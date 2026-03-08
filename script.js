@@ -207,14 +207,20 @@
 
 
 
-function validateEmail(email) {
-  const pattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+// function validateEmail(email) {
+//   const pattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-  if (pattern.test(email)) {
-    return "Valid Email";
-  } else {
-    return "Invalid Email";
-  }
+//   if (pattern.test(email)) {
+//     return "Valid Email";
+//   } else {
+//     return "Invalid Email";
+//   }
+// }
+
+// console.log(validateEmail("test@gmail.com"));
+
+function isValidPassword(password) {
+  return password.length >= 8;
 }
 
-console.log(validateEmail("test@gmail.com"));
+console.log(isValidPassword("abc12345"));
