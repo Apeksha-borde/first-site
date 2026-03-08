@@ -219,8 +219,15 @@
 
 // console.log(validateEmail("test@gmail.com"));
 
-function isValidPassword(password) {
-  return password.length >= 8;
+// function isValidPassword(password) {
+//   return password.length >= 8;
+// }
+
+// console.log(isValidPassword("abc12345"));
+
+
+function validatePhone(phone) {
+  return phone.length === 10;
 }
 
-console.log(isValidPassword("abc12345"));
+console.log(validatePhone("9876543210"));
