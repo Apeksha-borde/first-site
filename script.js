@@ -181,26 +181,40 @@
 
 
 
-function memoize(fn) {
-  const cache = {};
+// function memoize(fn) {
+//   const cache = {};
 
-  return function(n) {
-    if (cache[n]) {
-      return cache[n];
-    }
+//   return function(n) {
+//     if (cache[n]) {
+//       return cache[n];
+//     }
 
-    const result = fn(n);
-    cache[n] = result;
-    return result;
-  };
+//     const result = fn(n);
+//     cache[n] = result;
+//     return result;
+//   };
+// }
+
+// function factorial(n) {
+//   if (n === 0) return 1;
+//   return n * factorial(n - 1);
+// }
+
+// const fastFactorial = memoize(factorial);
+
+// console.log(fastFactorial(5));
+// console.log(fastFactorial(5)); 
+
+
+
+function validateEmail(email) {
+  const pattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+  if (pattern.test(email)) {
+    return "Valid Email";
+  } else {
+    return "Invalid Email";
+  }
 }
 
-function factorial(n) {
-  if (n === 0) return 1;
-  return n * factorial(n - 1);
-}
-
-const fastFactorial = memoize(factorial);
-
-console.log(fastFactorial(5));
-console.log(fastFactorial(5)); 
+console.log(validateEmail("test@gmail.com"));
