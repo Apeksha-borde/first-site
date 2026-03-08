@@ -137,20 +137,28 @@
 
 
 
-function flatten(arr) {
-  let result = [];
+// function flatten(arr) {
+//   let result = [];
 
-  for (let item of arr) {
-    if (Array.isArray(item)) {
-      result = result.concat(flatten(item));
-    } else {
-      result.push(item);
-    }
-  }
+//   for (let item of arr) {
+//     if (Array.isArray(item)) {
+//       result = result.concat(flatten(item));
+//     } else {
+//       result.push(item);
+//     }
+//   }
 
-  return result;
+//   return result;
+// }
+
+// let arr = [1, [2, [3, 4]], 5];
+
+// console.log(flatten(arr));
+
+
+
+function greet(name) {
+  console.log("Hello " + name);
 }
 
-let arr = [1, [2, [3, 4]], 5];
-
-console.log(flatten(arr));
+greet("Apeksha");
