@@ -157,23 +157,50 @@
 
 
 
-function greet(name) {
-  console.log("Hello " + name);
+// function greet(name) {
+//   console.log("Hello " + name);
+// }
+
+// greet("Apeksha");
+
+
+// const subtract = (a, b) => {
+//   return a - b;
+// };
+
+// console.log(subtract(10, 4));
+
+
+// function add(a, b) {
+//   return a + b;
+// }
+
+// let result = add(5, 3);
+// console.log(result);
+
+
+
+
+function memoize(fn) {
+  const cache = {};
+
+  return function(n) {
+    if (cache[n]) {
+      return cache[n];
+    }
+
+    const result = fn(n);
+    cache[n] = result;
+    return result;
+  };
 }
 
-greet("Apeksha");
-
-
-const subtract = (a, b) => {
-  return a - b;
-};
-
-console.log(subtract(10, 4));
-
-
-function add(a, b) {
-  return a + b;
+function factorial(n) {
+  if (n === 0) return 1;
+  return n * factorial(n - 1);
 }
 
-let result = add(5, 3);
-console.log(result);
+const fastFactorial = memoize(factorial);
+
+console.log(fastFactorial(5));
+console.log(fastFactorial(5)); 
