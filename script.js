@@ -226,8 +226,12 @@
 // console.log(isValidPassword("abc12345"));
 
 
-function validatePhone(phone) {
-  return phone.length === 10;
-}
+// function validatePhone(phone) {
+//   return phone.length === 10;
+// }
 
-console.log(validatePhone("9876543210"));
+// console.log(validatePhone("9876543210"));
+
+
+
+
