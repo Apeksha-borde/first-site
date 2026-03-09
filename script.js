@@ -235,3 +235,9 @@
 
 
 
+const title = document.getElementById("title");
+const btn = document.getElementById("btn");
+
+btn.addEventListener("click", function () {
+  title.textContent = "DOM Manipulation Working!";
+});
