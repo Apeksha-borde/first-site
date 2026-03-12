@@ -1,0 +1,38 @@
+body{
+    background-color: rgba(188, 220, 247, 0.922);
+    text-align: center;
+}
+.container{
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.game{
+    height: 60vmin;
+    width: 60vmin;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5vmin;
+}
+
+.box{
+    height:18vmin;
+    width: 18vmin;
+    border-radius: 0.8rem;
+    border: none;
+    box-shadow: 0 0 0.5rem  rgb(106, 137, 237);
+    font-size: 8.5vmin;
+    color: rgb(213, 13, 53);
+}
+
+#reset-btn{
+    padding: 1rem;
+    font-size: 1.25rem;
+    background-color: rgba(1, 90, 106, 0.759);
+    color: white;
+    border: none;
+    border-radius: 0.8rem;
+}
