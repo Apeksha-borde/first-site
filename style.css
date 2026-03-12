@@ -23,15 +23,16 @@ body{
     width: 18vmin;
     border-radius: 0.8rem;
     border: none;
-    box-shadow: 0 0 0.5rem  rgb(106, 137, 237);
+    box-shadow: 0 0 0.5rem  rgba(16, 112, 147, 0.855);
     font-size: 8.5vmin;
     color: rgb(213, 13, 53);
+    background-color: rgb(220, 245, 246);
 }
 
 #reset-btn{
     padding: 1rem;
     font-size: 1.25rem;
-    background-color: rgba(1, 90, 106, 0.759);
+    background-color: rgba(1, 55, 64, 0.759);
     color: white;
     border: none;
     border-radius: 0.8rem;
