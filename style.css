@@ -37,3 +37,19 @@ body{
     border: none;
     border-radius: 0.8rem;
 }
+
+#new-btn{
+    padding: 1rem;
+    font-size: 1.25rem;
+    background-color: rgba(1, 55, 64, 0.759);
+    color: white;
+    border: none;
+    border-radius: 0.8rem;
+}
+
+#msg{
+    color: rgb(3, 50, 50);
+    font-size: 4vmin;
+    margin-top: 0;
+}
+
