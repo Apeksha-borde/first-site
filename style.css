@@ -8,6 +8,11 @@ body{
     align-items: center;
     justify-content: center;
 }
+h1{
+    color: rgb(1, 54, 60);
+    font-size: 3.3vmin;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
 .game{
     height: 60vmin;
     width: 60vmin;
@@ -32,7 +37,7 @@ body{
 #reset-btn{
     padding: 1rem;
     font-size: 1.25rem;
-    background-color: rgba(1, 55, 64, 0.759);
+    background-color: rgb(1, 54, 60);
     color: white;
     border: none;
     border-radius: 0.8rem;
@@ -51,5 +56,6 @@ body{
     color: rgb(3, 50, 50);
     font-size: 4vmin;
     margin-top: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
