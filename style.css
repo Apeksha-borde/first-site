@@ -165,3 +165,41 @@ html,body{
     width: 200px;
     border-radius: 50%;
 }
+.subscribe{
+    color: white;
+    padding: 20px 30px;
+    padding-bottom: 7vw;
+    background-color: rgb(7, 7, 7);
+}
+.subscribe h5{
+    text-transform: uppercase;
+    opacity: .6;
+}
+.subscribe h3{
+    text-transform: uppercase;
+    font-size: 14px;
+    margin-top: 10px;
+}
+.footer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px 30px;
+    background-color: rgb(7, 7, 7);
+}
+.footerleft{
+display: flex;
+gap: 30px;
+color: white;
+}
+.footerright{
+    display: flex;
+    gap: 30px;
+}
+.footer a{
+    color: white;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+}
